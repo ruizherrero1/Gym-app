@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es" style="--bg: #111827; --surface: #1F2937; --card: #273449; --border: #3B4A63; --accent: #F97316; --accent2: #FDBA74; --text: #F3F4F6; --muted: #9CA3AF; --done: #34D399;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GymLog — Tu Entrenamiento</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0E1512;
@@ -278,13 +276,33 @@
   <div class="header-right"><button class="settings-btn" onclick="openModal('overlaySettings')" title="Ajustes">⚙</button>
     <div class="theme-picker" id="themePicker">
       <button class="theme-trigger" type="button" onclick="toggleThemeMenu(event)" title="Tema">
-        <span class="theme-bubble" id="themeBubble"></span>
+        <span class="theme-bubble" id="themeBubble" style="background: rgb(249, 115, 22);"></span>
         <span class="theme-chevron">▾</span>
       </button>
-      <div class="theme-menu" id="themeMenu"></div>
+      <div class="theme-menu" id="themeMenu">
+    <button type="button" class="theme-swatch " title="militar" style="background:#6EE7B7" onclick="selectTheme('militar')"></button>
+  
+    <button type="button" class="theme-swatch " title="cobalto" style="background:#4F8EF7" onclick="selectTheme('cobalto')"></button>
+  
+    <button type="button" class="theme-swatch " title="rojo" style="background:#EF4444" onclick="selectTheme('rojo')"></button>
+  
+    <button type="button" class="theme-swatch active" title="grafito" style="background:#F97316" onclick="selectTheme('grafito')"></button>
+  
+    <button type="button" class="theme-swatch " title="claro" style="background:#2563EB" onclick="selectTheme('claro')"></button>
+  
+    <button type="button" class="theme-swatch " title="nike" style="background:#B7FF00" onclick="selectTheme('nike')"></button>
+  
+    <button type="button" class="theme-swatch " title="oceano" style="background:#38BDF8" onclick="selectTheme('oceano')"></button>
+  
+    <button type="button" class="theme-swatch " title="sunset" style="background:#FB7185" onclick="selectTheme('sunset')"></button>
+  
+    <button type="button" class="theme-swatch " title="royal" style="background:#8B5CF6" onclick="selectTheme('royal')"></button>
+  
+    <button type="button" class="theme-swatch " title="arena" style="background:#D6A85F" onclick="selectTheme('arena')"></button>
+  </div>
     </div>
     <div class="timer-badge" id="timerBadge" onclick="goToActiveWorkout()" title="Volver al entrenamiento activo"><div class="timer-badge-title" id="timerBadgeTitle">Entreno</div><div class="timer-badge-time" id="timerBadgeTime">00:00</div></div>
-    <div class="date-badge" id="headerDate"></div>
+    <div class="date-badge" id="headerDate">Jue 9 Abr</div>
   </div>
 </header>
 
@@ -298,9 +316,37 @@
 
 <!-- WORKOUT TAB -->
 <div id="tab-workout" class="view active">
-  <div id="phase-grid">
+  <div id="phase-grid" style="display: block;">
     <div class="section-title">Elige tu rutina de hoy</div>
-    <div class="routine-grid" id="workoutRoutineGrid"></div>
+    <div class="routine-grid" id="workoutRoutineGrid">
+      <div class="routine-card" onclick="showPreview('imp-r-dia-4')">
+        <div class="r-icon">🧗</div>
+        <div class="r-name">Pecho + core</div>
+        <div class="r-meta"></div>
+        <div class="r-meta" style="margin-top:6px">5 ejercicios · 18 series</div>
+      </div>
+    
+      <div class="routine-card" onclick="showPreview('imp-r-dia-1')">
+        <div class="r-icon">⚡</div>
+        <div class="r-name">Biceps</div>
+        <div class="r-meta"></div>
+        <div class="r-meta" style="margin-top:6px">6 ejercicios · 16 series</div>
+      </div>
+    
+      <div class="routine-card" onclick="showPreview('imp-r-dia-2')">
+        <div class="r-icon">🥊</div>
+        <div class="r-name">Triceps + hombros</div>
+        <div class="r-meta"></div>
+        <div class="r-meta" style="margin-top:6px">5 ejercicios · 15 series</div>
+      </div>
+    
+      <div class="routine-card" onclick="showPreview('r-1775744697057-w0pp33')">
+        <div class="r-icon">🥊</div>
+        <div class="r-name">Abdominales</div>
+        <div class="r-meta"></div>
+        <div class="r-meta" style="margin-top:6px">8 ejercicios · 23 series</div>
+      </div>
+    </div>
   </div>
   <div id="phase-preview" style="display:none">
     <button class="back-btn" onclick="goToGrid()">← Todas las rutinas</button>
@@ -327,7 +373,7 @@
   <div id="routinesList"></div>
 </div>
 
-</div>
+
 
 <!-- BIBLIOTECA TAB -->
 <div id="tab-library" class="view">
@@ -1802,5 +1848,6 @@ document.getElementById('importFile')?.addEventListener('change', (e)=>{
 renderWorkoutGrid();
 </script>
 
-</body>
-</html>
+
+
+</body></html>
