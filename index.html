@@ -370,7 +370,371 @@
   <div class="section-title">Mis Rutinas</div>
   <button class="add-routine-btn" style="margin-bottom:12px" onclick="openAddRoutine()">＋ Nueva rutina</button>
   <input type="file" id="importFile" accept=".json" style="display:none">
-  <div id="routinesList"></div>
+  <div id="routinesList">
+    <div class="rt-block" style="background:linear-gradient(135deg, rgba(249,115,22,0.22), rgba(0,0,0,0)); border-color:rgba(249,115,22,0.45);">
+      <div class="rt-header">
+        <div <div="" style="flex:1">
+          <div class="rt-name">Pecho + core</div>
+          <div class="rt-meta"></div>
+          <div class="muted-note">5 ejercicios</div>
+        </div>
+        <button class="icon-btn" title="Duplicar rutina" onclick="duplicateRoutine('imp-r-dia-4')">⧉</button>
+        <button class="icon-btn" title="Subir rutina" onclick="moveRoutine(0,-1)" disabled="">↑</button>
+        <button class="icon-btn" title="Bajar rutina" onclick="moveRoutine(0,1)">↓</button>
+        <button class="icon-btn" title="Editar rutina" onclick="editRoutine('imp-r-dia-4')">✏️</button>
+        <button class="icon-btn danger" title="Eliminar rutina" onclick="deleteRoutine('imp-r-dia-4')">🗑</button>
+      </div>
+      <div class="rt-exercises">
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Sentadilla goblet</span>
+              <span class="rt-ex-detail">4×10 @ 16kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-4',0,-1)" disabled="">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-4',0,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-4','imp-e-4-0')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Peso muerto rumano con mancuernas</span>
+              <span class="rt-ex-detail">4×12 @ 12kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-4',1,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-4',1,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-4','imp-e-4-1')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Flexiones</span>
+              <span class="rt-ex-detail">4×12 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-4',2,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-4',2,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-4','imp-e-4-2')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Press de hombro con mancuernas</span>
+              <span class="rt-ex-detail">3×12 @ 10kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-4',3,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-4',3,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-4','imp-e-4-3')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Plancha</span>
+              <span class="rt-ex-detail">3×00:41</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-4',4,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-4',4,1)" disabled="">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-4','imp-e-4-4')">🗑</button>
+            </div>
+          </div>
+        
+        <button class="add-series-btn" style="margin-top:8px" onclick="addExToRoutine('imp-r-dia-4')">＋ Añadir ejercicio</button>
+      </div>
+    </div>
+  
+    <div class="rt-block" style="background:linear-gradient(135deg, rgba(253,186,116,0.18), rgba(0,0,0,0)); border-color:rgba(253,186,116,0.4);">
+      <div class="rt-header">
+        <div <div="" style="flex:1">
+          <div class="rt-name">Biceps</div>
+          <div class="rt-meta"></div>
+          <div class="muted-note">6 ejercicios</div>
+        </div>
+        <button class="icon-btn" title="Duplicar rutina" onclick="duplicateRoutine('imp-r-dia-1')">⧉</button>
+        <button class="icon-btn" title="Subir rutina" onclick="moveRoutine(1,-1)">↑</button>
+        <button class="icon-btn" title="Bajar rutina" onclick="moveRoutine(1,1)">↓</button>
+        <button class="icon-btn" title="Editar rutina" onclick="editRoutine('imp-r-dia-1')">✏️</button>
+        <button class="icon-btn danger" title="Eliminar rutina" onclick="deleteRoutine('imp-r-dia-1')">🗑</button>
+      </div>
+      <div class="rt-exercises">
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Dominadas supinas</span>
+              <span class="rt-ex-detail">4×6 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-1',0,-1)" disabled="">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-1',0,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-1','imp-e-5-0')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Curl de bíceps con mancuernas</span>
+              <span class="rt-ex-detail">4×8 @ 10kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-1',1,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-1',1,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-1','imp-e-5-1')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Curl martillo con mancuernas</span>
+              <span class="rt-ex-detail">3×10 @ 10kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-1',2,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-1',2,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-1','imp-e-5-2')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Remo con mancuerna</span>
+              <span class="rt-ex-detail">2×10 @ 15kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-1',3,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-1',3,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-1','imp-e-5-3')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Elevación de rodillas colgado</span>
+              <span class="rt-ex-detail">2×12 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-1',4,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-1',4,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-1','imp-e-5-4')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Paseo del granjero</span>
+              <span class="rt-ex-detail">1×0 @ 16kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-1',5,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-1',5,1)" disabled="">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-1','imp-e-5-5')">🗑</button>
+            </div>
+          </div>
+        
+        <button class="add-series-btn" style="margin-top:8px" onclick="addExToRoutine('imp-r-dia-1')">＋ Añadir ejercicio</button>
+      </div>
+    </div>
+  
+    <div class="rt-block" style="background:linear-gradient(135deg, rgba(249,115,22,0.16), rgba(253,186,116,0.1)); border-color:rgba(249,115,22,0.35);">
+      <div class="rt-header">
+        <div <div="" style="flex:1">
+          <div class="rt-name">Triceps + hombros</div>
+          <div class="rt-meta"></div>
+          <div class="muted-note">5 ejercicios</div>
+        </div>
+        <button class="icon-btn" title="Duplicar rutina" onclick="duplicateRoutine('imp-r-dia-2')">⧉</button>
+        <button class="icon-btn" title="Subir rutina" onclick="moveRoutine(2,-1)">↑</button>
+        <button class="icon-btn" title="Bajar rutina" onclick="moveRoutine(2,1)">↓</button>
+        <button class="icon-btn" title="Editar rutina" onclick="editRoutine('imp-r-dia-2')">✏️</button>
+        <button class="icon-btn danger" title="Eliminar rutina" onclick="deleteRoutine('imp-r-dia-2')">🗑</button>
+      </div>
+      <div class="rt-exercises">
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Fondos de pecho</span>
+              <span class="rt-ex-detail">4×8 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-2',0,-1)" disabled="">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-2',0,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-2','imp-e-6-0')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Press de hombro con mancuernas</span>
+              <span class="rt-ex-detail">4×8 @ 10kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-2',1,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-2',1,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-2','imp-e-6-1')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Extensión de tríceps con mancuerna</span>
+              <span class="rt-ex-detail">3×10 @ 12.5kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-2',2,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-2',2,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-2','imp-e-6-2')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Patada de tríceps con mancuerna</span>
+              <span class="rt-ex-detail">3×12 @ 10kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-2',3,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-2',3,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-2','imp-e-6-3')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Plancha</span>
+              <span class="rt-ex-detail">1×00:56</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('imp-r-dia-2',4,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('imp-r-dia-2',4,1)" disabled="">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('imp-r-dia-2','imp-e-6-4')">🗑</button>
+            </div>
+          </div>
+        
+        <button class="add-series-btn" style="margin-top:8px" onclick="addExToRoutine('imp-r-dia-2')">＋ Añadir ejercicio</button>
+      </div>
+    </div>
+  
+    <div class="rt-block" style="background:linear-gradient(135deg, rgba(253,186,116,0.14), rgba(249,115,22,0.08)); border-color:rgba(253,186,116,0.32);">
+      <div class="rt-header">
+        <div <div="" style="flex:1">
+          <div class="rt-name">Abdominales</div>
+          <div class="rt-meta"></div>
+          <div class="muted-note">8 ejercicios</div>
+        </div>
+        <button class="icon-btn" title="Duplicar rutina" onclick="duplicateRoutine('r-1775744697057-w0pp33')">⧉</button>
+        <button class="icon-btn" title="Subir rutina" onclick="moveRoutine(3,-1)">↑</button>
+        <button class="icon-btn" title="Bajar rutina" onclick="moveRoutine(3,1)" disabled="">↓</button>
+        <button class="icon-btn" title="Editar rutina" onclick="editRoutine('r-1775744697057-w0pp33')">✏️</button>
+        <button class="icon-btn danger" title="Eliminar rutina" onclick="deleteRoutine('r-1775744697057-w0pp33')">🗑</button>
+      </div>
+      <div class="rt-exercises">
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Plancha</span>
+              <span class="rt-ex-detail">2×01:00</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',0,-1)" disabled="">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',0,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744371597-wmrc35')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Elevación de piernas tumbado</span>
+              <span class="rt-ex-detail">3×16 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',1,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',1,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744437823-wgp53x')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Crunch con peso</span>
+              <span class="rt-ex-detail">3×30 @ 10kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',2,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',2,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744476577-zpd4up')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Plank jacks</span>
+              <span class="rt-ex-detail">3×20 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',3,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',3,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744547905-d63ywj')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Russian twist con peso</span>
+              <span class="rt-ex-detail">3×30 @ 16kg</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',4,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',4,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744578590-ny1v4t')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Plancha lateral</span>
+              <span class="rt-ex-detail">4×01:00</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',5,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',5,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744598700-gfu0a4')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Plancha subir bajar</span>
+              <span class="rt-ex-detail">3×15 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',6,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',6,1)">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744635306-pm62jl')">🗑</button>
+            </div>
+          </div>
+        
+          <div class="rt-ex-row">
+            <div class="rt-ex-main">
+              <span>Crunch bicicleta</span>
+              <span class="rt-ex-detail">2×30 reps</span>
+            </div>
+            <div class="rt-ex-actions">
+              <button class="icon-btn" title="Mover arriba" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',7,-1)">↑</button>
+              <button class="icon-btn" title="Mover abajo" onclick="moveExerciseInRoutine('r-1775744697057-w0pp33',7,1)" disabled="">↓</button>
+              <button class="icon-btn danger" title="Eliminar ejercicio" onclick="deleteExerciseFromRoutine('r-1775744697057-w0pp33','e-1775744672838-ozets6')">🗑</button>
+            </div>
+          </div>
+        
+        <button class="add-series-btn" style="margin-top:8px" onclick="addExToRoutine('r-1775744697057-w0pp33')">＋ Añadir ejercicio</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -385,25 +749,2857 @@
     </div>
     <div class="field" style="margin-bottom:0">
       <label>Grupo</label>
-      <select id="libraryGroupFilter" onchange="renderLibrary()"></select>
+      <select id="libraryGroupFilter" onchange="renderLibrary()" data-ready="1"><option value="Todos">Todos</option><option value="Abdominales">Abdominales</option><option value="Abductores">Abductores</option><option value="Aductores">Aductores</option><option value="Antebrazos">Antebrazos</option><option value="Bíceps">Bíceps</option><option value="Cardio">Cardio</option><option value="Cuádriceps">Cuádriceps</option><option value="Cuello">Cuello</option><option value="Cuerpo completo">Cuerpo completo</option><option value="Dorsales">Dorsales</option><option value="Espalda alta">Espalda alta</option><option value="Gemelos">Gemelos</option><option value="Glúteos">Glúteos</option><option value="Hombros">Hombros</option><option value="Isquiotibiales">Isquiotibiales</option><option value="Lumbar">Lumbar</option><option value="Pecho">Pecho</option><option value="Trapecios">Trapecios</option><option value="Tríceps">Tríceps</option></select>
     </div>
   </div>
-  <div class="library-count" id="libraryCount"></div>
-  <div class="library-grid" id="libraryGrid"></div>
+  <div class="library-count" id="libraryCount">298 ejercicios encontrados</div>
+  <div class="library-grid" id="libraryGrid">
+    <div class="library-card" onclick="openLibraryExercise(99)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05971201-Lever-Seated-Hip-Abduction_Hips_thumbnail@3x.jpg" alt="Abducción de cadera (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Abducción de cadera (máquina)</div>
+        <div class="library-group">Abductores</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(100)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05981201-Lever-Seated-Hip-Adduction_Thighs_thumbnail@3x.jpg" alt="Aducción de cadera (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Aducción de cadera (máquina)</div>
+        <div class="library-group">Aductores</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(36)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/09131201-Band-Middle-Fly-(female)_Chest_thumbnail_@3x.jpg" alt="Aperturas de pecho (banda)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Aperturas de pecho (banda)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(37)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03081201-Dumbbell-Fly_Chest_thumbnail@3x.jpg" alt="Aperturas de pecho (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Aperturas de pecho (mancuernas)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(38)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/57371201-Suspension-Fly_Chest-FIX_thumbnail_@3x.jpg" alt="Aperturas de pecho (suspensión)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Aperturas de pecho (suspensión)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(4)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02881201-Dumbbell-Around-Pullover_Chest_thumbnail@3x.jpg" alt="Around The World" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Around The World</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(9)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/75351201-Medicine-Ball-Slam-(VERSION-2)-(male)_Waist_thumbnail_@3x.jpg" alt="Ball Slams" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Ball Slams</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(10)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/45681201-Resistance-Band-Pull-Apart_Shoulders_thumbnail_@3x.jpg" alt="banda Pullaparts" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">banda Pullaparts</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(3)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/38931101-Assault-Bike-Run_Cardio_small_thumbnail_@3x.jpg" alt="Bicicleta de aire" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Bicicleta de aire</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(23)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00031201-air-bike-m_waist_thumbnail@3x.jpg" alt="Bicycle Crunch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Bicycle Crunch</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(24)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/51821201-Bird-Dog-(VERSION-2)-(female)_Back_thumbnail_@3x.jpg" alt="Bird dog" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Bird dog</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(26)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/22731101-Boxing-Right-Cross_small_thumbnail@3x.jpg" alt="Boxeo" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Boxeo</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(27)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11601201-Burpee_Cardio_thumbnail@3x.jpg" alt="Burpee" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Burpee</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(28)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/10301201-Lever-Pec-Deck-Fly_Chest_thumbnail@3x.jpg" alt="Butterfly (pec deck)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Butterfly (pec deck)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(46)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/15211101-Barbell-Hang-Clean-Below-the-Knees_Weightlifts_small_thumbnail@3x.jpg" alt="Cargada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Cargada</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(93)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/15201201-Barbell-Hang-Clean_Weightlifts-FIX_thumbnail_@3x.jpg" alt="Cargada colgante" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Cargada colgante</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(47)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00281201-Barbell-Clean-and-Press_Shoulders_thumbnail@3x.jpg" alt="Cargada y jerk" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Cargada y jerk</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(45)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/98491201-Side-Plank-Clamshell-(male)_Hips_thumbnail_@3x.jpg" alt="Clamshell" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Clamshell</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(116)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05111101-Jump-Rope_Cardio_small_thumbnail@3x.jpg" alt="Comba" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Comba</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(51)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02741201-Crunch-Floor-m_waist_thumbnail@3x.jpg" alt="Crunch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Crunch</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(52)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/66031201-Weighted-Plate-Lying-Crunch-(male)_Waist_thumbnail_@3x.jpg" alt="Crunch lastrado" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Crunch lastrado</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(20)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00311201-Barbell-Curl_Upper-Arms_thumbnail@3x.jpg" alt="Curl de bíceps (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl de bíceps (barra)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(21)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02941201-Dumbbell-Biceps-Curl_Upper-Arms_thumbnail@3x.jpg" alt="Curl de bíceps (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl de bíceps (mancuernas)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(22)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/10701201-Suspender-Arm-Curl-(female)_Upper-Arms_thumbnail_@3x.jpg" alt="Curl de bíceps (suspensión)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl de bíceps (suspensión)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(1)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00311201-Barbell-Curl_Upper-Arms_thumbnail@3x.jpg" alt="Curl de bíceps 21s" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl de bíceps 21s</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(49)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02971201-Dumbbell-Concentration-Curl_Upper-Arms_thumbnail@3x.jpg" alt="Curl de concentración" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl de concentración</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(11)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/63651201-EZ-Barbell-Standing-Back-Wrist-Curl_Forearms_thumbnail_@3x.jpg" alt="Curl de muñeca de bíceps por detrás de la espalda (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl de muñeca de bíceps por detrás de la espalda (barra)</div>
+        <div class="library-group">Antebrazos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(90)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/46191201-Band-Standing-Hammer-Curl_Upper-Arms_thumbnail_@3x.jpg" alt="Curl martillo (banda)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl martillo (banda)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(91)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03121201-Dumbbell-Hammer-Curl-(version-2)_Upper-Arms_thumbnail@3x.jpg" alt="Curl martillo (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl martillo (mancuernas)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(50)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02981101-Dumbbell-Cross-Body-Hammer-Curl_Forearms_small_thumbnail@3x.jpg" alt="Curl martillo cruzado" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl martillo cruzado</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(12)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/48381201-Cable-Unilateral-Bicep-Curl_Upper-Arms_thumbnail_@3x.jpg" alt="Curl por detrás de la espalda (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl por detrás de la espalda (polea)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(171)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00701201-Barbell-Preacher-Curl_Upper-Arms_thumbnail@3x.jpg" alt="Curl predicador (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl predicador (barra)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(172)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05921201-Lever-Preacher-Curl_Upper-Arms_thumbnail@3x.jpg" alt="Curl predicador (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl predicador (máquina)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(298)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04391201-Dumbbell-Zottman-Curl_Upper-Arms-FIX_thumbnail@3x.jpg" alt="Curl Zottman (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Curl Zottman (mancuernas)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(263)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/51811201-Lever-Standing-Single-Leg-Curl-(plate-loaded)_Thig_thumbnail_@3x.jpg" alt="de pie Curl femorals" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie Curl femorals</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(258)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/13731101-Bodyweight-Standing-Calf-Raise_Calves_small_thumbnail@3x.jpg" alt="de pie Elevación de gemelos" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie Elevación de gemelos</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(259)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01081101-Barbell-Standing-Leg-Calf-Raise_Calf_small_thumbnail@3x.jpg" alt="de pie Elevación de gemelos (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie Elevación de gemelos (barra)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(260)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04171201-Dumbbell-Standing-Calf-Raise_Calves_thumbnail@3x.jpg" alt="de pie Elevación de gemelos (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie Elevación de gemelos (mancuernas)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(261)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06051201-Lever-Standing-Calf-Raise_Calves_thumbnail@3x.jpg" alt="de pie Elevación de gemelos (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie Elevación de gemelos (máquina)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(262)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11641101-Smith-Calf-Raise-(version-2)_Calves_small_thumbnail_@3x.jpg" alt="de pie Elevación de gemelos (Smith)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie Elevación de gemelos (Smith)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(257)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/60401201-Cable-Donkey-Kickback-(male)_Hips_thumbnail_@3x.jpg" alt="de pie polea Glute Kickbacks" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie polea Glute Kickbacks</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(264)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11651201-Barbell-Standing-Military-Press-(without-rack)_Shoulders_thumbnail@3x.jpg" alt="de pie Press militar (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">de pie Press militar (barra)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(54)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/78391201-Dead-Bug-(VERSION-3)-(female)_Waist_thumbnail_@3x.jpg" alt="Dead bug" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Dead bug</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(62)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03021201-Dumbbell-Decline-Fly_Chest_thumbnail@3x.jpg" alt="declinado Aperturas de pecho (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">declinado Aperturas de pecho (mancuernas)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(63)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02771201-Decline-Crunch_Waist_thumbnail@3x.jpg" alt="declinado Crunch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">declinado Crunch</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(64)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02791201-Decline-Push-Up_Chest_thumbnail@3x.jpg" alt="declinado Flexión" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">declinado Flexión</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(58)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00331201-Barbell-Decline-Bench-Press_Chest_thumbnail@3x.jpg" alt="declinado Press de banca (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">declinado Press de banca (barra)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(59)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03011201-Dumbbell-Decline-Bench-Press_Chest_thumbnail@3x.jpg" alt="declinado Press de banca (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">declinado Press de banca (mancuernas)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(60)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/13001201-Lever-Decline-Chest-Press_Chest-FIX__thumbnail_@3x.jpg" alt="declinado Press de banca (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">declinado Press de banca (máquina)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(173)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06521201-Pull-up_Back_thumbnail@3x.jpg" alt="Dominada pronada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Dominada pronada</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(174)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00171201-Assisted-Pull-up_Back_thumbnail@3x.jpg" alt="Dominada pronada (asistida)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Dominada pronada (asistida)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(42)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/13261201-Chin-Up_Back_thumbnail@3x.jpg" alt="Dominada supina" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Dominada supina</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(43)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05721301-assisted-chin-up_small_thumbnail@3x.jpg" alt="Dominada supina (asistido)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Dominada supina (asistido)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(44)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/29871101-Weighted-Close-Grip-Chin-up-on-Dip-Cage_Back_small_thumbnail@3x.jpg" alt="Dominada supina (lastrado)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Dominada supina (lastrado)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(66)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/40581201-Leg-Raise-Dragon-Flag_Waist_thumbnail_@3x.jpg" alt="Dragon Flag" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Dragon Flag</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(205)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05941201-Lever-Seated-Calf-Raise-(plate-loaded)_thumbnail@3x.jpg" alt="Elevación de gemelos sentado" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación de gemelos sentado</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(41)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/35411201-Dumbbell-Incline-Y-Raise_Shoulders__thumbnail_@3x.jpg" alt="Elevación en Y con apoyo en pecho (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación en Y con apoyo en pecho (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(78)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/72511201-Hanging-Front-Lever-Raise-(male)_Waist_thumbnail_@3x.jpg" alt="Elevación front lever" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación front lever</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(79)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00411101-Barbell-Front-Raise_Shoulders_thumbnail@3x.jpg" alt="Elevación frontal (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación frontal (barra)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(80)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03101201-Dumbbell-Front-Raise_Shoulders_thumbnail@3x.jpg" alt="Elevación frontal (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación frontal (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(81)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/10751201-Suspender-Front-Raise-(female)_Shoulders_thumbnail_@3x.jpg" alt="Elevación frontal (suspensión)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación frontal (suspensión)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(139)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03341201-Dumbbell-Lateral-Raise_shoulder_thumbnail@3x.jpg" alt="Elevación lateral (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación lateral (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(138)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01781201-Cable-Lateral-Raise_shoulder_thumbnail@3x.jpg" alt="Elevación lateral (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elevación lateral (polea)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(70)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/21921201-Elliptical-Machine-Walk_Cardio_thumbnail@3x.jpg" alt="Elíptica" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Elíptica</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(33)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/23151201-Lever-Rotary-Calf_Calves_thumbnail@3x.jpg" alt="Extensión de gemelos (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Extensión de gemelos (máquina)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(141)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05851201-Lever-Leg-Extension_Thighs_thumbnail@3x.jpg" alt="Extensión de piernas (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Extensión de piernas (máquina)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(8)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/57821201-Weighted-Hyperextension-(female)_Hips_thumbnail_@3x.jpg" alt="Extensión lumbar (hiperextensión lastrada)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Extensión lumbar (hiperextensión lastrada)</div>
+        <div class="library-group">Lumbar</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(6)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/18601201-Hyperextension-(VERSION-2)_Hips_thumbnail@3x.jpg" alt="Extensión lumbar (Hyperextension)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Extensión lumbar (Hyperextension)</div>
+        <div class="library-group">Lumbar</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(7)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05731201-Lever-Back-Extension_Waist_thumbnail@3x.jpg" alt="Extensión lumbar (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Extensión lumbar (máquina)</div>
+        <div class="library-group">Lumbar</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(71)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/77441201-Cable-Standing-Supinated-Face-Pull-(with-rope)_Sho_thumbnail_@3x.jpg" alt="Face pull" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Face pull</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(73)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14751201-Bent-Leg-Side-Kick-(kneeling)-(female)_Hips-FIX_thumbnail_@3x.jpg" alt="Fire hydrants" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Fire hydrants</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(177)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11721201-Assisted-Weighted-Push-up_Chest_thumbnail@3x.jpg" alt="Flexión (lastrado)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Flexión (lastrado)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(65)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02831101-Diamond-Push-up_Upper-Arms_small_thumbnail@3x.jpg" alt="Flexión diamante" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Flexión diamante</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(74)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/37241201-Barbell-Floor-Chest-Press_Chest_thumbnail_@3x.jpg" alt="Floor press (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Floor press (barra)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(75)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08151201-Triceps-Dips-Floor_Upper-Arms_thumbnail@3x.jpg" alt="Fondo de tríceps en suelo" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Fondo de tríceps en suelo</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(35)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00091201-Assisted-Chest-Dip-(kneeling)_Chest_thumbnail@3x.jpg" alt="Fondo para pecho (asistido)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Fondo para pecho (asistido)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(77)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/61601201-Dumbbell-Frog-Hip-Thrust-(male)_Hips_thumbnail_@3x.jpg" alt="Frog pumps (mancuerna)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Frog pumps (mancuerna)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(82)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00421201-Barbell-Front-Squat_Hips_thumbnail@3x.jpg" alt="Front Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Front Sentadilla</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(32)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08621201-Cable-twist-(up-down)_Waist_thumbnail@3x.jpg" alt="Giro en polea (de arriba hacia abajo)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Giro en polea (de arriba hacia abajo)</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(84)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/57771201-Glute-Ham-Raise-(VERSION-2)-(female)_Thighs_thumbnail_@3x.jpg" alt="Glute Ham Raise" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Glute Ham Raise</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(86)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14741201-Bent-Leg-Kickback-(kneeling)_Hips_thumbnail@3x.jpg" alt="Glute Kickback on Floor" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Glute Kickback on Floor</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(87)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/22811201-Dumbbell-Goblet-Squat-(female)_Thighs_thumbnail@3x.jpg" alt="Goblet Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Goblet Sentadilla</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(88)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/72301201-Kettlebell-Gorilla-Row-(male)_Back__thumbnail_@3x.jpg" alt="Gorilla Row (Kettlebell)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Gorilla Row (Kettlebell)</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(89)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00461201-Barbell-Hack-Squat_Hips_thumbnail@3x.jpg" alt="Hack Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hack Sentadilla</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(92)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/33021101-Handstand_Upper-arms_small_thumbnail@3x.jpg" alt="Handstand Hold" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Handstand Hold</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(94)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/15221101-Barbell-Hang-Snatch_Weightlifts_small_thumbnail@3x.jpg" alt="Hang Snatch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hang Snatch</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(95)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/98191201-Hanging-Knee-Raise-(male)_Waist_thumbnail_@3x.jpg" alt="Hanging Knee Raise" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hanging Knee Raise</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(96)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00061101-Alternate-Heel-Touchers_waist-FIX_small_thumbnail@3x.jpg" alt="Heel Taps" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Heel Taps</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(97)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/36811201-Dumbbell-Squeeze-Bench-Press_Chest-FIX__thumbnail_@3x.jpg" alt="Hex Press (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hex Press (mancuernas)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(98)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/30911201-High-Knee-Skips-(male)_Cardio-FIX_thumbnail_@3x.jpg" alt="High Knees" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">High Knees</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(101)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/80151201-Glute-Bridge-from-Bench-(male)_Hips_thumbnail_@3x.jpg" alt="Hip thrust" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hip thrust</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(102)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/21461201-Lever-Hip-Thrust_Hips_thumbnail_@3x.jpg" alt="Hip thrust (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hip thrust (máquina)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(103)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/57611201-Smith-Hip-Thrust-(female)_Hips_thumbnail_@3x.jpg" alt="Hip thrust (Smith máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hip thrust (Smith máquina)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(104)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/56491201-Hollow-Rock-(male)_Waist_thumbnail_@3x.jpg" alt="Hollow Rock" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Hollow Rock</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(107)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03191201-Dumbbell-Incline-Fly_Chest_thumbnail@3x.jpg" alt="inclinado Aperturas de pecho (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">inclinado Aperturas de pecho (mancuernas)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(109)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/37851201-Incline-Push-Up-(on-box)_thumbnail@3x.jpg" alt="inclinado Flexións" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">inclinado Flexións</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(105)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03141201-Dumbbell-Incline-Bench-Press_Chest_thumbnail@3x.jpg" alt="inclinado Press de banca (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">inclinado Press de banca (mancuernas)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(108)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14791201-Lever-Incline-Chest-Press_Chest_thumbnail@3x.jpg" alt="inclinado Press de pecho (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">inclinado Press de pecho (máquina)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(110)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04991201-Inverted-Row_Back_thumbnail@3x.jpg" alt="Inverted Row" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Inverted Row</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(112)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05811101-Lever-High-Row-(plate-loaded)_Back_small_thumbnail@3x.jpg" alt="Iso- Lateral High Row (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Iso- Lateral High Row (máquina)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(113)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/42141201-Lever-Low-Row-(plate-loaded)_Back__thumbnail_@3x.jpg" alt="Iso-Lateral Low Row" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Iso-Lateral Low Row</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(111)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05761201-Lever-Chest-Press-(plate-loaded)_Chest_thumbnail@3x.jpg" alt="Iso-Lateral Press de pecho (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Iso-Lateral Press de pecho (máquina)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(114)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/38841201-Jack-knife-Sit-up-(female)_Waist_thumbnail_@3x.jpg" alt="Jackknife Sit Up" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Jackknife Sit Up</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(133)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01501201-Cable-Bar-Lateral-Pulldown_Back_thumbnail@3x.jpg" alt="Jalón al pecho (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Jalón al pecho (polea)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(115)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00521201-Barbell-JM-Bench-Press_Upper-Arms-FIX_-2_thumbnail_@3x.jpg" alt="JM Press (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">JM Press (barra)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(117)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/49641201-Jump-Shrug_Thighs_thumbnail_@3x.jpg" alt="Jump Shrug" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Jump Shrug</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(118)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/30941201-Jumping-Jack-(male)_Cardio_thumbnail_@3x.jpg" alt="Jumping Jack" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Jumping Jack</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(119)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/45341201-Kettlebell-Standing-Slingshots-(female)_Shoulders_thumbnail_@3x.jpg" alt="Kettlebell Around the World" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kettlebell Around the World</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(120)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/45301201-Kettlebell-Single-Arm-Clean-(female)_Weightlifts_thumbnail_@3x.jpg" alt="Kettlebell Cargada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kettlebell Cargada</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(121)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/69331201-Kettlebell-Biceps-Curl-(female)_Upper-Arms_thumbnail_@3x.jpg" alt="Kettlebell Curl" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kettlebell Curl</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(122)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/23561201-Kettlebell-Goblet-Squat-(female)_Thighs_thumbnail_@3x.jpg" alt="Kettlebell Goblet Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kettlebell Goblet Sentadilla</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(123)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05481101-Kettlebell-Sumo-High-Pull_back_small_thumbnail@3x.jpg" alt="Kettlebell High Pull" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kettlebell High Pull</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(124)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05421101-Kettlebell-One-Arm-Snatch_Shoulders_small_thumbnail@3x.jpg" alt="Kettlebell Snatch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kettlebell Snatch</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(126)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05511101-Kettlebell-Turkish-Get-Up-(Squat-style)_Thighs_small_thumbnail@3x.jpg" alt="Kettlebell Turkish Get Up" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kettlebell Turkish Get Up</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(127)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/21261201-Captains-chair-leg-raise_Hips_thumbnail@3x.jpg" alt="Knee Raise Parallel Bars" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Knee Raise Parallel Bars</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(128)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/32111101-Kneeling-Push-up-(male)_small_thumbnail@3x.jpg" alt="Kneeling Flexión" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Kneeling Flexión</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(129)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14021201-L-sit_Waist_thumbnail@3x.jpg" alt="L-Sit Hold" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">L-Sit Hold</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(130)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/32001201-Lever-Bent-over-Row-with-V-bar-(plate-loaded)_Back_thumbnail_@3x.jpg" alt="Landmine Row" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Landmine Row</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(131)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/29761301-Landmine-Squat-and-Press_360_thumbnail@3x.jpg" alt="Landmine Sentadilla and Press" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Landmine Sentadilla and Press</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(134)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/63921201-Cable-Lateral-Pulldown-with-Mag-Grip_Back_thumbnail_@3x.jpg" alt="Lat Pulldown – Close Grip (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lat Pulldown – Close Grip (polea)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(132)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/09741101-Band-close-grip-pulldown_Back_small_thumbnail@3x.jpg" alt="Lat Pulldown (banda)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lat Pulldown (banda)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(135)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/24601101-Resistance-Band-Lateral-Walk_Hips_small_thumbnail@3x.jpg" alt="Lateral banda Walks" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lateral banda Walks</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(136)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/86421201-Standing-Single-Side-Leg-Raise-Chair-Supported-(fe_thumbnail_@3x.jpg" alt="Lateral Leg Raises" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lateral Leg Raises</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(140)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/69241201-Side-Step-Deep-Squat-(male)_Plyometrics_thumbnail_@3x.jpg" alt="Lateral Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lateral Sentadilla</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(137)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/29721201-Side-Lunge_Thighs_thumbnail_@3x.jpg" alt="Lateral Zancada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lateral Zancada</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(143)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/29631101-Captains-Chair-Straight-Leg-Raise_Waist_small_thumbnail@3x.jpg" alt="Leg Raise Parallel Bars" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Leg Raise Parallel Bars</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(144)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01791201-Cable-Low-Fly_Chest_thumbnail@3x.jpg" alt="Low polea Fly Crossovers" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Low polea Fly Crossovers</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(147)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/81941201-Lying-Knee-Raise-(male)_Waist_thumbnail_@3x.jpg" alt="Lying Knee Raise" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lying Knee Raise</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(148)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11631201-Lying-Leg-Raise_Waist_thumbnail@3x.jpg" alt="Lying Leg Raise" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lying Leg Raise</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(149)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/101661201-Lying-Neck-Flexion_Neck_thumbnail_@3x.jpg" alt="Lying Neck Curls" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lying Neck Curls</div>
+        <div class="library-group">Cuello</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(150)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/10421101-Weighted-Lying-Neck-Extension_neck_small_thumbnail_@3x.jpg" alt="Lying Neck Extension (lastrado)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Lying Neck Extension (lastrado)</div>
+        <div class="library-group">Cuello</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(151)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/40381201-Landmine-One-Arm-Bent-Over-Row_Back_thumbnail_@3x.jpg" alt="Meadows Rows (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Meadows Rows (barra)</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(152)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/75311201-Plank-Alternate-Knee-Tuck-(female)_Waist_thumbnail_@3x.jpg" alt="Mountain climber" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Mountain climber</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(153)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/47741201-Pull-up-(negative)-(female)_Back__thumbnail_@3x.jpg" alt="Negative Dominada pronada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Negative Dominada pronada</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(154)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/77461201-Nordic-Hamstring-Curl-(male)_Thighs_thumbnail_@3x.jpg" alt="Nordic Hamstrings Curls" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Nordic Hamstrings Curls</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(155)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06351201-Oblique-Crunches-Floor_Waist_thumbnail@3x.jpg" alt="Oblique Crunch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Oblique Crunch</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(156)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/16361201-Cable-Overhead-Curl_Upper-Arms_thumbnail_@3x.jpg" alt="Overhead Curl (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Overhead Curl (polea)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(160)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00691201-Barbell-Overhead-Squat_Thighs-FIX_thumbnail_@3x.jpg" alt="Overhead Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Overhead Sentadilla</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(29)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/12021201-Cable-horizontal-Pallof-Press_waist_thumbnail@3x.jpg" alt="Pallof press en polea" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pallof press en polea</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(72)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/21331201-Farmers-walk_Cardio_thumbnail@3x.jpg" alt="Paseo del granjero" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Paseo del granjero</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(85)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/10371201-Lever-Standing-Rear-Kick_Hips_thumbnail@3x.jpg" alt="Patada de glúteo (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Patada de glúteo (máquina)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(76)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/12441201-Flutter-Kicks-(version-3)_Hips_thumbnail_@3x.jpg" alt="Patadas flutter" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Patadas flutter</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(161)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/50161201-Barbell-Pause-Full-Squat_Thighs__thumbnail_@3x.jpg" alt="Pause Sentadilla (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pause Sentadilla (barra)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(162)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/30171201-Barbell-Pendlay-Row_Back_thumbnail_@3x.jpg" alt="Pendlay Row (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pendlay Row (barra)</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(55)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08951201-Band-Deadlift-(female)_Hips_thumbnail_@3x.jpg" alt="Peso muerto (banda)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Peso muerto (banda)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(56)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03001201-Dumbbell-Deadlift_Hips_thumbnail_@3x.jpg" alt="Peso muerto (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Peso muerto (mancuernas)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(57)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08111201-Trap-Bar-Deadlift_Thighs_thumbnail@3x.jpg" alt="Peso muerto (trap bar)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Peso muerto (trap bar)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(195)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00851201-Barbell-Romanian-Deadlift_Hips-FIX_thumbnail_@3x.jpg" alt="Peso muerto rumano (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Peso muerto rumano (barra)</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(196)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14591201-Dumbbell-Romanian-Deadlift_Hips_thumbnail@3x.jpg" alt="Peso muerto rumano (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Peso muerto rumano (mancuernas)</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(163)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/29211101-Pike-Push-up_Chest_small_thumbnail@3x.jpg" alt="Pike Pushup" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pike Pushup</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(164)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/16571201-Dumbbell-Cross-Body-Hammer-Curl-(Version-2)_Upper-Arms-FIX_thumbnail_@3x.jpg" alt="Pinwheel Curl (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pinwheel Curl (mancuernas)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(165)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/17591101-Single-Leg-Squat-(pistol)-male_Thighs_small_thumbnail@3x.jpg" alt="Pistol Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pistol Sentadilla</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(166)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04631201-Front-Plank-m_waist_thumbnail@3x.jpg" alt="Plancha" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Plancha</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(222)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/07151201-Side-Plank-m_Waist_thumbnail@3x.jpg" alt="Plancha lateral" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Plancha lateral</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(167)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/66981201-Weighted-Plate-Standing-Biceps-Curl-(male)_Forearm_thumbnail_@3x.jpg" alt="Plate Curl" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Plate Curl</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(168)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08341201-Weighted-Front-Raise_Shoulders_thumbnail@3x.jpg" alt="Plate Elevación frontal" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Plate Elevación frontal</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(169)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08561201-Weighted-Svend-Press_Chest_thumbnail@3x.jpg" alt="Plate Squeeze (Svend Press)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Plate Squeeze (Svend Press)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(30)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/12691201-Cable-Standing-Up-Straight-Crossovers_Chest_thumbnail@3x.jpg" alt="polea Fly Crossovers" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">polea Fly Crossovers</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(170)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06481201-Power-Clean_Thighs_thumbnail@3x.jpg" alt="Power Cargada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Power Cargada</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(34)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/07381201-Sled-45-Calf-Press_Calves_thumbnail@3x.jpg" alt="Prensa de gemelos (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Prensa de gemelos (máquina)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(142)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/07391201-Sled-45-Leg-Press_Hips_thumbnail@3x.jpg" alt="Prensa de piernas (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Prensa de piernas (máquina)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(16)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00301201-Barbell-Close-Grip-Bench-Press_Upper-Arms_thumbnail@3x.jpg" alt="Press de banca – Close Grip (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de banca – Close Grip (barra)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(17)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01221201-Barbell-Wide-Bench-Press_Chest_thumbnail@3x.jpg" alt="Press de banca – Wide Grip (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de banca – Wide Grip (barra)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(14)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00251201-Barbell-Bench-Press_Chest_thumbnail@3x.jpg" alt="Press de banca (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de banca (barra)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(15)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02891201-Dumbbell-Bench-Press_Chest_thumbnail@3x.jpg" alt="Press de banca (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de banca (mancuernas)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(61)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/07531201-Smith-Decline-Bench-Press_Chest_thumbnail@3x.jpg" alt="Press de banca declinado (máquina Smith)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de banca declinado (máquina Smith)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(106)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/07571201-Smith-Incline-Bench-Press_Chest_thumbnail@3x.jpg" alt="Press de banca inclinado (máquina Smith)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de banca inclinado (máquina Smith)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(216)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04051201-Dumbbell-Seated-Shoulder-Press_Shoulders_thumbnail@3x.jpg" alt="Press de hombros (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de hombros (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(217)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05871201-Lever-Military-Press-(plate-loaded)_shoulder_thumbnail_@3x.jpg" alt="Press de hombros (máquina Plates)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de hombros (máquina Plates)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(39)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/09201201-Band-Standing-Chest-Press-(female)_Chest_thumbnail_@3x.jpg" alt="Press de pecho (banda)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de pecho (banda)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(40)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05771201-Lever-Chest-Press_Chest_thumbnail@3x.jpg" alt="Press de pecho (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press de pecho (máquina)</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(157)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11651201-Barbell-Standing-Military-Press-(without-rack)_Shoulders_thumbnail@3x.jpg" alt="Press militar (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press militar (barra)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(158)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04261201-Dumbbell-Standing-Overhead-Press_shoulder_thumbnail@3x.jpg" alt="Press militar (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press militar (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(159)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/12241201-Smith-Standing-Shoulder-Press_Shoulders_thumbnail@3x.jpg" alt="Press militar (Smith máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press militar (Smith máquina)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(68)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/36811201-Dumbbell-Squeeze-Bench-Press_Chest-FIX__thumbnail_@3x.jpg" alt="Press squeeze con mancuernas" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Press squeeze con mancuernas</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(83)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/101801201-Hamstring-Bridge-(VERSION-2)-(female)_Hips_thumbnail_@3x.jpg" alt="Puente de glúteos" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Puente de glúteos</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(31)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/12061201-Cable-pull-through_hips_thumbnail@3x.jpg" alt="Pull-through en polea" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pull-through en polea</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(175)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03751201-Dumbbell-Pullover_Chest_thumbnail@3x.jpg" alt="Pullover (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Pullover (mancuernas)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(176)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/12001201-Push-Press_Shoulders_thumbnail@3x.jpg" alt="Push Press" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Push Press</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(178)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00741101-Barbell-Rack-Pull_Hips-FIX_thumbnail@3x.jpg" alt="Rack Pull" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rack Pull</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(180)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/24871101-Dumbbell-Rear-Delt-Fly-(female)_Shoulders_small_thumbnail@3x.jpg" alt="Rear Delt Reverse Fly (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rear Delt Reverse Fly (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(181)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06021201-Lever-Seated-Reverse-Fly_Shoulders_thumbnail@3x.jpg" alt="Rear Delt Reverse Fly (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rear Delt Reverse Fly (máquina)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(179)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02251201-Cable-Standing-Cross-over-High-Reverse-Fly_Shoulders_thumbnail_@3x.jpg" alt="Rear Delt Reverse Fly (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rear Delt Reverse Fly (polea)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(182)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/99041201-Lever-Pure-Rear-Kick-(female)_Hips_thumbnail_@3x.jpg" alt="Rear Kick (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rear Kick (máquina)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(67)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02921201-Dumbbell-Bent-over-Row_Back_thumbnail@3x.jpg" alt="Remo con mancuerna" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Remo con mancuerna</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(18)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/38991201-Band-bent-over-row-(male)_Back_thumbnail_@3x.jpg" alt="Remo inclinado (banda)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Remo inclinado (banda)</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(19)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02931201-Dumbbell-Bent-Over-Row_Back_thumbnail@3x.jpg" alt="Remo inclinado (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Remo inclinado (mancuernas)</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(183)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08721201-Reverse-Crunch-m_waist_thumbnail@3x.jpg" alt="Reverse Crunch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Crunch</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(184)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00801201-Barbell-Reverse-Curl_Forearm_thumbnail@3x.jpg" alt="Reverse Curl (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Curl (barra)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(185)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03821201-Dumbbell-Revers-grip-Biceps-Curl_Forearms_thumbnail@3x.jpg" alt="Reverse Curl (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Curl (mancuernas)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(186)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/98681201-Cable-45-degrees-Single-Arm-Reverse-Fly-(male)_Sho_thumbnail_@3x.jpg" alt="Reverse Fly Single Arm (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Fly Single Arm (polea)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(187)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04031201-Dumbbell-Seated-Revers-grip-Concentration-Curl_Forearms_thumbnail_@3x.jpg" alt="Reverse Grip Curl de concentración" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Grip Curl de concentración</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(188)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02081201-Cable-Reverse-grip-Straight-Back-Seated-High-Row_Back_thumbnail@3x.jpg" alt="Reverse Grip Lat Pulldown (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Grip Lat Pulldown (polea)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(189)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05931201-Lever-Reverse-Hyperextension-(plate-loaded)_Hips_thumbnail@3x.jpg" alt="Reverse Hyperextension" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Hyperextension</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(192)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08671201-Reverse-plank_Back_thumbnail@3x.jpg" alt="Reverse Plank" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Plank</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(190)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/63881201-Bodyweight-Reverse-Lunge-(female)_Thighs_thumbnail_@3x.jpg" alt="Reverse Zancada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Zancada</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(191)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03811201-Dumbbell-Rear-Lunge_Thighs_thumbnail@3x.jpg" alt="Reverse Zancada (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Reverse Zancada (mancuernas)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(193)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/55221201-Ring-Pull-Up_Back_1_thumbnail_@3x.jpg" alt="Ring Dominada pronada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Ring Dominada pronada</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(194)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08061201-Suspended-Push-Up_Chest_thumbnail_@3x.jpg" alt="Ring Flexión" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Ring Flexión</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(197)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01651201-Cable-Hammer-Curl-(with-rope)-(male)_Forearms_thumbnail_@3x.jpg" alt="Rope polea Curl" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rope polea Curl</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(198)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02371201-Cable-Straight-Arm-Pulldown-(with-rope)_Back_thumbnail@3x.jpg" alt="Rope Straight Arm Pulldown" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rope Straight Arm Pulldown</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(199)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/22701201-Rowing-Straight-Back-(with-rowing-machine)-(female)_Cardio_thumbnail@3x.jpg" alt="Rowing máquina" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Rowing máquina</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(200)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/21961201-Run-(female)_Cardio_thumbnail@3x.jpg" alt="Running" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Running</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(201)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/23711201-Weighted-Russian-Twist_Waist_thumbnail@3x.jpg" alt="Russian Twist (lastrado)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Russian Twist (lastrado)</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(25)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/71591201-Jump-Box-(female)_Plyometrics_thumbnail_@3x.jpg" alt="Salto al cajón" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Salto al cajón</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(250)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/57491201-Band-squat-(female)_Hips_thumbnail_@3x.jpg" alt="Sentadilla (banda)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla (banda)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(252)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/57881201-Lever-Squat-(plate-loaded)-(female)_Thighs_thumbnail_@3x.jpg" alt="Sentadilla (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla (máquina)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(251)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11971201-Squat-m_Thighs_thumbnail@3x.jpg" alt="Sentadilla (peso corporal)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla (peso corporal)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(253)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/11431101-Suspender-Squat_Thighs_small_thumbnail@3x.jpg" alt="Sentadilla (suspensión)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla (suspensión)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(249)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/29601201-Dumbbell-Split-Squat_Thighs_thumbnail@3x.jpg" alt="Sentadilla búlgara (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla búlgara (mancuernas)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(13)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/29501201-Lever-Belt-Squat_Thighs_thumbnail_@3x.jpg" alt="Sentadilla con cinturón (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla con cinturón (máquina)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(293)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/66961201-Sit-(wall)-(female)_Thighs_thumbnail_@3x.jpg" alt="Sentadilla isométrica en pared" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla isométrica en pared</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(5)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/23751201-Single-Leg-Squat-with-Support-(female)_Thighs_thumbnail_@3x.jpg" alt="Sentadilla pistol asistida" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla pistol asistida</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(254)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/17171201-Cable-Squat-Row-(with-rope-attachment)_Back_Thighs_thumbnail_@3x.jpg" alt="Sentadilla Row" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sentadilla Row</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(209)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05991201-Lever-Seated-Leg-Curl_Thighs_thumbnail@3x.jpg" alt="sentado Curl femoral (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Curl femoral (máquina)</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(206)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14511201-Lever-Seated-Dip_Upper-Arms_thumbnail@3x.jpg" alt="sentado Dip máquina" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Dip máquina</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(208)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03961201-Dumbbell-Seated-Lateral-Raise_shoulder_thumbnail@3x.jpg" alt="sentado Elevación lateral (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Elevación lateral (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(207)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03151201-Dumbbell-Incline-Biceps-Curl_Upper-Arms_thumbnail@3x.jpg" alt="sentado inclinado Curl (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado inclinado Curl (mancuernas)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(212)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/26331201-Dumbbell-Seated-Palms-Up-Wrist-Curl-(female)_Forea_thumbnail_@3x.jpg" alt="sentado Palms Up Wrist Curl" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Palms Up Wrist Curl</div>
+        <div class="library-group">Antebrazos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(202)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01801201-Cable-Low-Seated-Row_Back_thumbnail@3x.jpg" alt="sentado polea Row – Bar Grip" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado polea Row – Bar Grip</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(203)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02181201-Cable-Seated-Wide-grip-Row_Back_thumbnail@3x.jpg" alt="sentado polea Row – Bar Wide Grip" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado polea Row – Bar Wide Grip</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(204)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/26611201-Cable-Seated-Row-with-V-bar_Back_thumbnail_@3x.jpg" alt="sentado polea Row – V Grip (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado polea Row – V Grip (polea)</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(210)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/68771201-Barbell-Incline-Shoulders-Press-(inside-squat-cage_thumbnail_@3x.jpg" alt="sentado Press militar (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Press militar (barra)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(211)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02901201-Dumbbell-Bench-Seated-Press_Shoulders_thumbnail@3x.jpg" alt="sentado Press militar (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Press militar (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(213)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/22651201-Lever-Seated-Row-(version-2)_Back_thumbnail@3x.jpg" alt="sentado Row (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Row (máquina)</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(214)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/18711201-Lever-Triceps-Dip-(plate-loaded)_Upper-Arms-FIX_thumbnail_@3x.jpg" alt="sentado Triceps Press" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Triceps Press</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(215)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00791201-Barbell-Revers-Wrist-Curl-II_Forearms_thumbnail@3x.jpg" alt="sentado Wrist Extension (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">sentado Wrist Extension (barra)</div>
+        <div class="library-group">Antebrazos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(218)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06991201-Shoulder-Tap-Push-up_Plyometrics_thumbnail@3x.jpg" alt="Shoulder Taps" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Shoulder Taps</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(220)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06041201-Lever-Shrug-(plate-loaded)_Back_thumbnail_@3x.jpg" alt="Shrug (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Shrug (máquina)</div>
+        <div class="library-group">Trapecios</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(219)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02201201-Cable-Shrug_Back_thumbnail@3x.jpg" alt="Shrug (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Shrug (polea)</div>
+        <div class="library-group">Trapecios</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(221)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00021201-45-Side-Bend_Waist_thumbnail@3x.jpg" alt="Side Bend" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Side Bend</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(225)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01901201-Cable-One-Arm-Curl_Upper-Arms_thumbnail_@3x.jpg" alt="Single Arm Curl (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Arm Curl (polea)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(227)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01921201-Cable-One-Arm-Lateral-Raise_Shoulders-3_thumbnail_@3x.jpg" alt="Single Arm Elevación lateral (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Arm Elevación lateral (polea)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(226)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/12041101-Cable-one-arm-lat-pulldown_back_small_thumbnail@3x.jpg" alt="Single Arm Lat Pulldown" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Arm Lat Pulldown</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(223)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/62191201-Cable-Standing-Single-Arm-Fly_Chest_thumbnail_@3x.jpg" alt="Single Arm polea Crossover" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Arm polea Crossover</div>
+        <div class="library-group">Pecho</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(224)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/75641201-Cable-Split-Stance-Single-Arm-Row-(male)_Back_thumbnail_@3x.jpg" alt="Single Arm polea Row" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Arm polea Row</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(228)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03621201-Dumbbell-One-Arm-Triceps-Extension-(on-bench)_Upper-Arms_thumbnail@3x.jpg" alt="Single Arm Tricep Extension (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Arm Tricep Extension (mancuernas)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(229)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/50331201-Cable-Single-Arm-Triceps-Pushdown-(rope-attachment_thumbnail_@3x.jpg" alt="Single Arm Triceps Pushdown (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Arm Triceps Pushdown (polea)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(230)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/71081201-Lever-Seated-Leg-Extension-(VERSION-2)_Thighs_thumbnail_@3x.jpg" alt="Single Extensión de piernass" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Extensión de piernass</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(237)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/50521201-Single-Leg-Calf-Raise-Off-Step_Calves_thumbnail_@3x.jpg" alt="Single Leg de pie Elevación de gemelos" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg de pie Elevación de gemelos</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(238)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/101691201-Barbell-Standing-Single-Leg-Calf-Raise_Calves_thumbnail_@3x.jpg" alt="Single Leg de pie Elevación de gemelos (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg de pie Elevación de gemelos (barra)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(239)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/39731201-Dumbbell-Single-Leg-Calf-Raise-(female)-(VERSION-2)_Calves_thumbnail_@3x.jpg" alt="Single Leg de pie Elevación de gemelos (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg de pie Elevación de gemelos (mancuernas)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(240)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/100761201-Lever-Standing-Single-Leg-Calf-Raise_Calves_thumbnail_@3x.jpg" alt="Single Leg de pie Elevación de gemelos (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg de pie Elevación de gemelos (máquina)</div>
+        <div class="library-group">Gemelos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(232)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/20711101-Single-Leg_Hip-Thrusts_Hips_small_thumbnail@3x.jpg" alt="Single Leg Hip thrust" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg Hip thrust</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(233)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/47551101-Dumbbell-Single-Leg-Hip-Thrust_Hips_small_thumbnail_@3x.jpg" alt="Single Leg Hip thrust (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg Hip thrust (mancuernas)</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(231)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/60001201-Single-Leg-Bridge-with-Outstretched-Leg-(left)-(ma_thumbnail_@3x.jpg" alt="Single Leg Puente de glúteos" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg Puente de glúteos</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(235)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/17561201-Barbell-Single-Leg-Deadlift_Hips_thumbnail_@3x.jpg" alt="Single Leg Romanian Peso muerto (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg Romanian Peso muerto (barra)</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(236)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/97541201-Dumbbell-Single-Leg-Romanian-Deadlift-Leg-Raise-(m_thumbnail_@3x.jpg" alt="Single Leg Romanian Peso muerto (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Leg Romanian Peso muerto (mancuernas)</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(234)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08831201-Lever-Horizontal-One-leg-Press_Hips_thumbnail@3x.jpg" alt="Single Prensa de piernas (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Single Prensa de piernas (máquina)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(241)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08511201-Weighted-Sissy-Squat_Thighs_thumbnail@3x.jpg" alt="Sissy Sentadilla (lastrado)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sissy Sentadilla (lastrado)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(242)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/47561201-Dumbbell-Sit-up_Waist_thumbnail_@3x.jpg" alt="Sit Up (lastrado)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sit Up (lastrado)</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(243)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00601201-Barbell-Lying-Triceps-Extension-Skull-Crusher_Upper-Arms_thumbnail_@3x.jpg" alt="Skullcrusher (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Skullcrusher (barra)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(244)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/22511201-Dumbbell-Lying-Triceps-Extension-(female)_Upper-Arms_thumbnail_@3x.jpg" alt="Skullcrusher (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Skullcrusher (mancuernas)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(245)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/25241201-Power-Sled-Push-(female)_Thighs_thumbnail@3x.jpg" alt="Sled Push" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sled Push</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(246)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00721201-Barbell-Prone-Incline-Curl_Upper-Arms_thumbnail@3x.jpg" alt="Spider Curl (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Spider Curl (barra)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(247)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/48791201-Spiderman-Plank_Waist_thumbnail_@3x.jpg" alt="Spiderman" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Spiderman</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(248)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/22791201-Stationary-Bike-Run-(version-4)_Cardio_thumbnail@3x.jpg" alt="Spinning" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Spinning</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(255)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/23111201-Walking-on-Stepmill_Cardio_thumbnail@3x.jpg" alt="Stair máquina (Floors)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Stair máquina (Floors)</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(256)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/23111201-Walking-on-Stepmill_Cardio_thumbnail@3x.jpg" alt="Stair máquina (Steps)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Stair máquina (Steps)</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(266)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02381201-Cable-Straight-Arm-Pulldown_Back_thumbnail@3x.jpg" alt="Straight Arm Lat Pulldown (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Straight Arm Lat Pulldown (polea)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(267)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01161201-Barbell-Straight-Leg-Deadlift_Thighs_thumbnail@3x.jpg" alt="Straight Leg Peso muerto" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Straight Leg Peso muerto</div>
+        <div class="library-group">Isquiotibiales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(265)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/94901201-Step-Up-on-Box_Thighs_thumbnail_@3x.jpg" alt="Subida al cajón" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Subida al cajón</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(69)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04311101-Dumbbell-Step-up_Hips_small_thumbnail@3x.jpg" alt="Subida al cajón con mancuernas" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Subida al cajón con mancuernas</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(268)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01171201-Barbell-Sumo-Deadlift_Hips_thumbnail@3x.jpg" alt="Sumo Peso muerto" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sumo Peso muerto</div>
+        <div class="library-group">Glúteos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(269)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/10631201-Barbell-sumo-squat_Thighs_thumbnail@3x.jpg" alt="Sumo Sentadilla (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sumo Sentadilla (barra)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(270)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/50731201-Kettlebell-Sumo-Squat-(VERSION-2)_Hips_thumbnail_@3x.jpg" alt="Sumo Sentadilla (Kettlebell)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Sumo Sentadilla (Kettlebell)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(271)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/68861201-Superman-Hold-(male)_Hips_thumbnail_@3x.jpg" alt="Superman" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Superman</div>
+        <div class="library-group">Lumbar</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(125)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05491201-Kettlebell-Swing_Hips-FIX_thumbnail_@3x.jpg" alt="Swing con kettlebell" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Swing con kettlebell</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(272)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/06061201-Lever-T-bar-Row-(plate-loaded)_Back_thumbnail@3x.jpg" alt="T Bar Row" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">T Bar Row</div>
+        <div class="library-group">Espalda alta</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(273)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/05501101-Kettlebell-Thruster_Shoulders_small_thumbnail@3x.jpg" alt="Thruster (Kettlebell)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Thruster (Kettlebell)</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(2)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/62141201-Lying-Scissors-Cross-(male)_Hips_thumbnail_@3x.jpg" alt="Tijeras abdominales" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Tijeras abdominales</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(48)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/15171101-Barbell-Clean-Pull_Weightlifts_small_thumbnail@3x.jpg" alt="Tirón de cargada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Tirón de cargada</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(274)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/52751201-Lying-Toe-Touch_Waist_thumbnail_@3x.jpg" alt="Toe Touch" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Toe Touch</div>
+        <div class="library-group">Abdominales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(275)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/21971201-Run-on-Treadmill-(female)_Cardio_thumbnail@3x.jpg" alt="Treadmill" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Treadmill</div>
+        <div class="library-group">Cardio</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(276)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08141201-Triceps-Dip_Upper-Arms_thumbnail@3x.jpg" alt="Triceps Dip" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Dip</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(277)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/17551201-Weighted-Tricep-Dips_Upper-Arms_thumbnail_@3x.jpg" alt="Triceps Dip (lastrado)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Dip (lastrado)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(278)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00921201-Barbell-Seated-Overhead-Triceps-Extension_Upper-Arms_thumbnail@3x.jpg" alt="Triceps Extension (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Extension (barra)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(280)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04301201-Dumbbell-Standing-Triceps-Extension_Upper-Arms_thumbnail@3x.jpg" alt="Triceps Extension (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Extension (mancuernas)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(281)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/10331201-Lever-Triceps-Extension_Upper-Arms_thumbnail@3x.jpg" alt="Triceps Extension (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Extension (máquina)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(279)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/01491201-Cable-Alternate-Triceps-Extension_Upper-Arms_thumbnail_@3x.jpg" alt="Triceps Extension (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Extension (polea)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(282)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/58761201-Suspension-Triceps-Extension-(male)_Upper-Arms_thumbnail_@3x.jpg" alt="Triceps Extension (suspensión)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Extension (suspensión)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(284)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/03331201-Dumbbell-Kickback_Upper-Arms_thumbnail@3x.jpg" alt="Triceps Kickback (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Kickback (mancuernas)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(283)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/45661101-Cable-Neutral-Grip-Kickback_Upper-arms_small_thumbnail_@3x.jpg" alt="Triceps Kickback (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Kickback (polea)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(285)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/16051201-Cable-Triceps-Pushdown-(SZ-bar)_Upper-arms_thumbnail_@3x.jpg" alt="Triceps Pressdown" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Pressdown</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(286)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02011201-Cable-Pushdown_Upper-Arms_thumbnail@3x.jpg" alt="Triceps Pushdown" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Triceps Pushdown</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(288)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04371201-Dumbbell-Upright-Row_shoulder_thumbnail@3x.jpg" alt="Upright Row (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Upright Row (mancuernas)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(287)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/02461201-Cable-Upright-Row_shoulder_thumbnail@3x.jpg" alt="Upright Row (polea)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Upright Row (polea)</div>
+        <div class="library-group">Hombros</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(289)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/71791201-Lever-Cross-Lat-Pulldown-(VERSION-2)-(male)_Back_thumbnail_@3x.jpg" alt="Vertical Traction (máquina)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Vertical Traction (máquina)</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(290)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/52011201-Dumbbell-Waiter-Biceps-Curl_Upper-Arms_thumbnail_@3x.jpg" alt="Waiter Curl (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Waiter Curl (mancuernas)</div>
+        <div class="library-group">Bíceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(292)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/51611201-Medicine-Ball-Throw-Squat-with-Wall_Shoulders_thumbnail_@3x.jpg" alt="Wall Ball" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Wall Ball</div>
+        <div class="library-group">Cuerpo completo</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(294)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14291201-Wide-Grip-Pull-Up_Back_thumbnail@3x.jpg" alt="Wide Dominada pronada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Wide Dominada pronada</div>
+        <div class="library-group">Dorsales</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(295)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/04361201-Dumbbell-Tate-Press_Triceps_thumbnail_@3x.jpg" alt="Wide-Elbow Triceps Press (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Wide-Elbow Triceps Press (mancuernas)</div>
+        <div class="library-group">Tríceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(296)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08591101-Wrist-Roller_Forearms_small_thumbnail@3x.jpg" alt="Wrist Roller" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Wrist Roller</div>
+        <div class="library-group">Antebrazos</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(145)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14601201-Walking-Lunge-Male_Hips_thumbnail@3x.jpg" alt="Zancada" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Zancada</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(146)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/00541201-Barbell-Lunge_Thighs_thumbnail@3x.jpg" alt="Zancada (barra)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Zancada (barra)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(291)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/14601201-Walking-Lunge-Male_Hips_thumbnail@3x.jpg" alt="Zancada caminando" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Zancada caminando</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(53)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/08811201-Dumbbell-Curtsey-lunge-(female)_Thighs_thumbnail_@3x.jpg" alt="Zancada curtsy (mancuernas)" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Zancada curtsy (mancuernas)</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  
+    <div class="library-card" onclick="openLibraryExercise(297)">
+      <div class="library-thumb"><img src="https://d2l9nsnmtah87f.cloudfront.net/exercise-thumbnails/15451101-Barbell-full-Zercher-Squat_Thighs_small_thumbnail@3x.jpg" alt="Zercher Sentadilla" loading="lazy"></div>
+      <div style="min-width:0">
+        <div class="library-name">Zercher Sentadilla</div>
+        <div class="library-group">Cuádriceps</div>
+        <div class="library-meta">Vídeo disponible</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- CALENDAR TAB -->
 <div id="tab-calendar" class="view">
   <div class="cal-nav">
     <button onclick="changeMonth(-1)">◀</button>
-    <div class="cal-month" id="calMonthLabel"></div>
+    <div class="cal-month" id="calMonthLabel">Abril 2026</div>
     <button onclick="changeMonth(1)">▶</button>
   </div>
   <div class="cal-header">
     <div class="cal-day-name">L</div><div class="cal-day-name">M</div><div class="cal-day-name">X</div>
     <div class="cal-day-name">J</div><div class="cal-day-name">V</div><div class="cal-day-name">S</div><div class="cal-day-name">D</div>
   </div>
-  <div class="calendar-grid" id="calGrid"></div>
+  <div class="calendar-grid" id="calGrid"><div class="cal-day other-month"><div class="day-num">30</div></div><div class="cal-day other-month"><div class="day-num">31</div></div>
+      <div class="cal-day  " onclick="showDayDetail('2026-04-01')">
+        <div class="day-num">1</div>
+        
+      </div>
+    
+      <div class="cal-day has-workout " onclick="showDayDetail('2026-04-02')">
+        <div class="day-num">2</div>
+        <div class="dot"></div>
+      </div>
+    
+      <div class="cal-day has-workout " onclick="showDayDetail('2026-04-03')">
+        <div class="day-num">3</div>
+        <div class="dot"></div>
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-04')">
+        <div class="day-num">4</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-05')">
+        <div class="day-num">5</div>
+        
+      </div>
+    
+      <div class="cal-day has-workout " onclick="showDayDetail('2026-04-06')">
+        <div class="day-num">6</div>
+        <div class="dot"></div>
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-07')">
+        <div class="day-num">7</div>
+        
+      </div>
+    
+      <div class="cal-day has-workout " onclick="showDayDetail('2026-04-08')">
+        <div class="day-num">8</div>
+        <div class="dot"></div>
+      </div>
+    
+      <div class="cal-day  today" onclick="showDayDetail('2026-04-09')">
+        <div class="day-num">9</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-10')">
+        <div class="day-num">10</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-11')">
+        <div class="day-num">11</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-12')">
+        <div class="day-num">12</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-13')">
+        <div class="day-num">13</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-14')">
+        <div class="day-num">14</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-15')">
+        <div class="day-num">15</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-16')">
+        <div class="day-num">16</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-17')">
+        <div class="day-num">17</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-18')">
+        <div class="day-num">18</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-19')">
+        <div class="day-num">19</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-20')">
+        <div class="day-num">20</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-21')">
+        <div class="day-num">21</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-22')">
+        <div class="day-num">22</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-23')">
+        <div class="day-num">23</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-24')">
+        <div class="day-num">24</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-25')">
+        <div class="day-num">25</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-26')">
+        <div class="day-num">26</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-27')">
+        <div class="day-num">27</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-28')">
+        <div class="day-num">28</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-29')">
+        <div class="day-num">29</div>
+        
+      </div>
+    
+      <div class="cal-day  " onclick="showDayDetail('2026-04-30')">
+        <div class="day-num">30</div>
+        
+      </div>
+    </div>
   <div id="calDetail"></div>
 </div>
 
@@ -411,10 +3607,10 @@
 <div id="tab-progress" class="view">
   <div class="section-title">Resumen</div>
   <div class="stats-row">
-    <div class="stat-card"><div class="stat-num" id="statTotal">0</div><div class="stat-label">Entrenos</div></div>
-    <div class="stat-card"><div class="stat-num" id="statWeek">0</div><div class="stat-label">Esta semana</div></div>
+    <div class="stat-card"><div class="stat-num" id="statTotal">34</div><div class="stat-label">Entrenos</div></div>
+    <div class="stat-card"><div class="stat-num" id="statWeek">3</div><div class="stat-label">Esta semana</div></div>
     <div class="stat-card"><div class="stat-num" id="statStreak">0</div><div class="stat-label">Racha días</div></div>
-    <div class="stat-card"><div class="stat-num" id="statVolume">0</div><div class="stat-label">Volumen 7d</div></div>
+    <div class="stat-card"><div class="stat-num" id="statVolume">3527</div><div class="stat-label">Volumen 7d</div></div>
   </div>
   <div class="mini-grid">
     <div class="chart-card">
@@ -429,13 +3625,13 @@
     </div>
     <div class="chart-card">
       <div class="chart-title">Análisis rápido</div>
-      <div id="progressSummaryList" class="mini-list"></div>
+      <div id="progressSummaryList" class="mini-list"><div class="mini-item"><span>Sesiones filtradas</span><strong>11</strong></div><div class="mini-item"><span>Duración media</span><strong>39 min</strong></div><div class="mini-item"><span>Volumen filtrado</span><strong>11032 kg</strong></div><div class="mini-item"><span>Ejercicio top</span><strong>Curl martillo con mancuernas</strong></div></div>
     </div>
   </div>
   <div class="section-title">Análisis</div>
   <div class="filters-grid">
-    <div class="field"><label>Rutina</label><select id="progressRoutineFilter" onchange="renderProgress()"></select></div>
-    <div class="field"><label>Ejercicio</label><select id="progressExerciseFilter" onchange="renderProgress()"></select></div>
+    <div class="field"><label>Rutina</label><select id="progressRoutineFilter" onchange="renderProgress()"><option value="all">Todas</option><option value="Brazo lunes">Brazo lunes</option><option value="Dia 1">Dia 1</option><option value="Dia 2">Dia 2</option><option value="Dia 4">Dia 4</option><option value="Diaria">Diaria</option><option value="Finde brazo completo">Finde brazo completo</option><option value="Miercoles triceps hombro">Miercoles triceps hombro</option></select></div>
+    <div class="field"><label>Ejercicio</label><select id="progressExerciseFilter" onchange="renderProgress()"><option value="all">Todos</option><option value="Curl de bíceps con mancuernas">Curl de bíceps con mancuernas</option><option value="Curl de concentración">Curl de concentración</option><option value="Curl inverso con mancuernas">Curl inverso con mancuernas</option><option value="Curl martillo con mancuernas">Curl martillo con mancuernas</option><option value="Dominadas pronas">Dominadas pronas</option><option value="Dominadas supinas">Dominadas supinas</option><option value="Elevación de rodillas colgado">Elevación de rodillas colgado</option><option value="Extensión de tríceps con mancuerna">Extensión de tríceps con mancuerna</option><option value="Flexiones">Flexiones</option><option value="Fondos de pecho">Fondos de pecho</option><option value="Fondos de tríceps">Fondos de tríceps</option><option value="Paseo del granjero">Paseo del granjero</option><option value="Patada de tríceps con mancuerna">Patada de tríceps con mancuerna</option><option value="Peso muerto rumano con mancuernas">Peso muerto rumano con mancuernas</option><option value="Plancha">Plancha</option><option value="Press de hombro con mancuernas">Press de hombro con mancuernas</option><option value="Remo con mancuerna">Remo con mancuerna</option><option value="Sentadilla goblet">Sentadilla goblet</option><option value="Suspensión pasiva">Suspensión pasiva</option><option value="Swing con kettlebell">Swing con kettlebell</option></select></div>
     <div class="field"><label>Periodo</label><select id="progressRangeFilter" onchange="renderProgress()">
       <option value="30">Últimos 30 días</option>
       <option value="90">Últimos 90 días</option>
@@ -464,15 +3660,197 @@
   <div class="mini-grid">
     <div class="chart-card">
       <div class="chart-title">Rutinas más usadas</div>
-      <div id="topRoutines" class="mini-list"></div>
+      <div id="topRoutines" class="mini-list"><div class="mini-item"><span>Brazo lunes</span><strong>3</strong></div><div class="mini-item"><span>Finde brazo completo</span><strong>3</strong></div><div class="mini-item"><span>Miercoles triceps hombro</span><strong>2</strong></div><div class="mini-item"><span>Dia 4</span><strong>1</strong></div><div class="mini-item"><span>Dia 1</span><strong>1</strong></div></div>
     </div>
     <div class="chart-card">
       <div class="chart-title">Ejercicios más repetidos</div>
-      <div id="topExercises" class="mini-list"></div>
+      <div id="topExercises" class="mini-list"><div class="mini-item"><span>Curl martillo con mancuernas</span><strong>21 series</strong></div><div class="mini-item"><span>Extensión de tríceps con mancuerna</span><strong>18 series</strong></div><div class="mini-item"><span>Dominadas supinas</span><strong>16 series</strong></div><div class="mini-item"><span>Curl de bíceps con mancuernas</span><strong>16 series</strong></div><div class="mini-item"><span>Press de hombro con mancuernas</span><strong>15 series</strong></div></div>
     </div>
   </div>
   <div class="section-title">Últimas sesiones</div>
-  <div id="logList"></div>
+  <div id="logList">
+    <div class="log-entry">
+      <div class="log-entry-date">2026-04-08 · 41 min · 1055 kg volumen</div>
+      <div class="log-entry-name">Dia 2</div>
+      
+        <div class="log-ex"><strong>Fondos de pecho</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Press de hombro con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Extensión de tríceps con mancuerna</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Patada de tríceps con mancuerna</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Plancha</strong>: 1/1 series completadas · 00:56</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-04-06 · 35 min · 920 kg volumen</div>
+      <div class="log-entry-name">Dia 1</div>
+      
+        <div class="log-ex"><strong>Dominadas supinas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl de bíceps con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl martillo con mancuernas</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Remo con mancuerna</strong>: 2/2 series completadas</div>
+      
+        <div class="log-ex"><strong>Elevación de rodillas colgado</strong>: 2/2 series completadas</div>
+      
+        <div class="log-ex"><strong>Paseo del granjero</strong>: 1/1 series completadas</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-04-03 · 54 min · 1552 kg volumen</div>
+      <div class="log-entry-name">Dia 4</div>
+      
+        <div class="log-ex"><strong>Sentadilla goblet</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Peso muerto rumano con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Flexiones</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Press de hombro con mancuernas</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Plancha</strong>: 3/3 series completadas · 00:41, 00:41, 00:38</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-04-02 · 50 min · 1075 kg volumen</div>
+      <div class="log-entry-name">Finde brazo completo</div>
+      
+        <div class="log-ex"><strong>Dominadas pronas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl de concentración</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl martillo con mancuernas</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Fondos de tríceps</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Extensión de tríceps con mancuerna</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Suspensión pasiva</strong>: 1/1 series completadas · 00:37</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-03-31 · 42 min · 920 kg volumen</div>
+      <div class="log-entry-name">Brazo lunes</div>
+      
+        <div class="log-ex"><strong>Dominadas supinas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl de bíceps con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl martillo con mancuernas</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Remo con mancuerna</strong>: 2/2 series completadas</div>
+      
+        <div class="log-ex"><strong>Elevación de rodillas colgado</strong>: 2/2 series completadas</div>
+      
+        <div class="log-ex"><strong>Paseo del granjero</strong>: 1/1 series completadas</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-03-27 · 42 min · 1050 kg volumen</div>
+      <div class="log-entry-name">Finde brazo completo</div>
+      
+        <div class="log-ex"><strong>Dominadas pronas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl de concentración</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl martillo con mancuernas</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Fondos de tríceps</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Extensión de tríceps con mancuerna</strong>: 3/3 series completadas</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-03-25 · 25 min · 815 kg volumen</div>
+      <div class="log-entry-name">Miercoles triceps hombro</div>
+      
+        <div class="log-ex"><strong>Fondos de pecho</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Press de hombro con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Extensión de tríceps con mancuerna</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Plancha</strong>: 1/1 series completadas · 00:37</div>
+      
+        <div class="log-ex"><strong>Curl inverso con mancuernas</strong>: 1/1 series completadas</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-03-23 · 22 min · 620 kg volumen</div>
+      <div class="log-entry-name">Brazo lunes</div>
+      
+        <div class="log-ex"><strong>Dominadas supinas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl de bíceps con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl martillo con mancuernas</strong>: 3/3 series completadas</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-03-21 · 46 min · 1050 kg volumen</div>
+      <div class="log-entry-name">Finde brazo completo</div>
+      
+        <div class="log-ex"><strong>Dominadas pronas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl de concentración</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl martillo con mancuernas</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Fondos de tríceps</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Extensión de tríceps con mancuerna</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Suspensión pasiva</strong>: 1/1 series completadas · 00:51</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-03-18 · 40 min · 1055 kg volumen</div>
+      <div class="log-entry-name">Miercoles triceps hombro</div>
+      
+        <div class="log-ex"><strong>Fondos de pecho</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Press de hombro con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Extensión de tríceps con mancuerna</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Patada de tríceps con mancuerna</strong>: 2/2 series completadas</div>
+      
+        <div class="log-ex"><strong>Plancha</strong>: 1/1 series completadas · 01:02</div>
+      
+        <div class="log-ex"><strong>Curl inverso con mancuernas</strong>: 1/1 series completadas</div>
+      
+    </div>
+  
+    <div class="log-entry">
+      <div class="log-entry-date">2026-03-16 · 33 min · 920 kg volumen</div>
+      <div class="log-entry-name">Brazo lunes</div>
+      
+        <div class="log-ex"><strong>Dominadas supinas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl de bíceps con mancuernas</strong>: 4/4 series completadas</div>
+      
+        <div class="log-ex"><strong>Curl martillo con mancuernas</strong>: 3/3 series completadas</div>
+      
+        <div class="log-ex"><strong>Remo con mancuerna</strong>: 2/2 series completadas</div>
+      
+        <div class="log-ex"><strong>Elevación de rodillas colgado</strong>: 3/3 series completadas</div>
+      
+    </div>
+  </div>
 </div>
 
 <!-- MODAL: BIBLIOTECA -->
@@ -1847,6 +5225,7 @@ document.getElementById('importFile')?.addEventListener('change', (e)=>{
 });
 renderWorkoutGrid();
 </script>
+
 
 
 
