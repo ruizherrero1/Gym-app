@@ -429,6 +429,8 @@
     .section-title { font-size: 18px; margin-bottom: 10px; }
     .routine-grid { grid-template-columns: 1fr; gap: 10px; }
     .r-name { font-size: 17px; }
+    .routine-card-compact .r-badges{gap:6px;}
+    .routine-card-compact .r-badge{padding:7px 9px;font-size:12px;}
     .preview-title { font-size: 22px; }
     .start-btn { font-size: 20px; padding: 14px; }
     .exercise-header-active { padding: 10px 12px; gap: 8px; }
@@ -477,6 +479,37 @@
     .col-headers.time-row { grid-template-columns: 30px 1fr 86px 42px; gap: 6px; }
     .series-row.time-row { grid-template-columns: 30px 1fr 86px 42px; gap: 6px; }
   }
+
+.routine-card-compact{display:flex;flex-direction:column;justify-content:space-between;min-height:166px;padding:20px 20px 18px;border-radius:22px;gap:16px;position:relative;overflow:hidden;}
+.routine-card-compact::after{content:'';position:absolute;inset:auto -20% -55% 35%;height:150px;background:radial-gradient(circle, rgba(255,255,255,.16), transparent 62%);pointer-events:none;opacity:.55;}
+.routine-card-compact .routine-card-main{display:flex;flex-direction:column;gap:10px;min-width:0;position:relative;z-index:1;}
+.routine-card-compact .r-name{font-size:24px;line-height:1.05;font-weight:800;letter-spacing:-0.02em;color:var(--accent);}
+.routine-card-compact .r-meta{font-size:14px;color:var(--muted);}
+.routine-card-compact .r-badges{display:flex;flex-wrap:nowrap;gap:8px;min-width:0;overflow:hidden;align-items:center;}
+.routine-card-compact .r-badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06);font-weight:700;font-size:11px;white-space:nowrap;line-height:1;flex-shrink:0;display:flex;align-items:center;}
+.routine-card-compact .r-badge.muted{background:rgba(255,255,255,.05);}
+.r-footer-inline{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:1;}
+.r-footer-inline .r-last{font-size:14px;color:var(--text);opacity:.88;}
+.r-footer-inline .r-start-btn{margin-left:auto;min-width:136px;height:54px;border-radius:18px;font-size:16px;font-weight:800;box-shadow:none;border:1px solid transparent;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .18s ease, filter .18s ease, border-color .18s ease, background .18s ease;}
+.r-footer-inline .r-start-btn:hover{transform:translateY(-1px);filter:brightness(1.04);}
+.preview-shell{position:relative;overflow:hidden;border-radius:26px;padding:20px;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.07);box-shadow:0 18px 44px rgba(0,0,0,.18);}
+.preview-shell::before{content:'';position:absolute;inset:-35% -20% auto 45%;height:220px;background:radial-gradient(circle, rgba(255,255,255,.16), transparent 65%);pointer-events:none;opacity:.7;}
+.preview-header-pro{position:relative;z-index:1;display:flex;flex-direction:column;gap:18px;}
+.preview-topline{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}
+.preview-heading{min-width:0;display:flex;flex-direction:column;gap:8px;}
+.preview-kicker{display:inline-flex;align-items:center;gap:8px;width:max-content;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);}
+.preview-title{font-size:34px;line-height:1;font-weight:900;letter-spacing:-.03em;}
+.preview-desc{font-size:15px;line-height:1.4;color:var(--muted);max-width:44ch;}
+.preview-start-btn{align-self:flex-start;min-width:156px;height:54px;border-radius:18px;font-size:16px;font-weight:900;border:1px solid transparent;box-shadow:none;transition:transform .18s ease, filter .18s ease;}
+.preview-start-btn:hover{transform:translateY(-1px);filter:brightness(1.04);}
+.preview-stats-grid{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:12px;}
+.preview-stat-card{padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+.preview-stat-label{font-size:12px;color:var(--muted);margin-top:6px;}
+.preview-stat-value{font-size:20px;font-weight:900;line-height:1.1;color:var(--text);}
+.preview-exercise-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;justify-content:flex-start;}
+.preview-ex-pill{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06);font-weight:700;color:var(--text);}
+@media (max-width:480px){.preview-title{font-size:30px;}.preview-stats-grid{grid-template-columns:1fr;}.preview-shell{padding:18px;}}
+
 </style>
 </head>
 <body>
@@ -533,22 +566,19 @@
         <div class="r-icon">⚡</div>
         <div class="r-name">Biceps</div>
         <div class="r-meta"></div>
-        <div class="r-meta" style="margin-top:6px">5 ejercicios · 15 series</div>
-      </div>
+              </div>
     
       <div class="routine-card" onclick="showPreview('imp-r-dia-2')">
         <div class="r-icon">🥊</div>
         <div class="r-name">Triceps + hombros</div>
         <div class="r-meta"></div>
-        <div class="r-meta" style="margin-top:6px">5 ejercicios · 15 series</div>
-      </div>
+              </div>
     
       <div class="routine-card" onclick="showPreview('imp-r-dia-4')">
         <div class="r-icon">🧗</div>
         <div class="r-name">Pecho + core</div>
         <div class="r-meta"></div>
-        <div class="r-meta" style="margin-top:6px">5 ejercicios · 16 series</div>
-      </div>
+              </div>
     
       <div class="routine-card" onclick="showPreview('r-1775902883064-kmtsmh')">
         <div class="r-icon">🦵</div>
@@ -11416,6 +11446,32 @@ function getRoutineCardStyle(index){
     : variants[index % variants.length];
 }
 
+function parseMinutesLabel(value){
+  const match = String(value || '').match(/(\d+)/);
+  return match ? +match[1] : null;
+}
+
+function formatWorkoutDateLabel(date){
+  if(!date) return 'Nunca';
+  const d = new Date(date + 'T12:00:00');
+  if(Number.isNaN(d.getTime())) return date;
+  return d.toLocaleDateString('es-ES', { day:'2-digit', month:'2-digit', year:'numeric' });
+}
+
+function getRoutineWorkoutMeta(routine){
+  const logs = state.workoutLog
+    .filter(entry => entry.routineId === routine.id || entry.routineName === routine.name)
+    .sort((a,b)=> b.date.localeCompare(a.date));
+
+  const minutes = logs.map(entry => parseMinutesLabel(entry.durationLabel)).filter(v => Number.isFinite(v));
+  const fallbackSeries = routine.exercises.reduce((acc, ex) => acc + (+ex.defaultSeries || 0), 0);
+  return {
+    count: logs.length,
+    lastDate: logs[0]?.date || '',
+    approxMinutes: minutes.length ? Math.round(minutes.reduce((a,b)=>a+b,0) / minutes.length) : Math.max(10, fallbackSeries * 3)
+  };
+}
+
 function renderWorkoutGrid(){
   document.getElementById('phase-grid').style.display='block';
   document.getElementById('phase-preview').style.display='none';
@@ -11429,12 +11485,25 @@ function renderWorkoutGrid(){
 
   grid.innerHTML = state.routines.map(r=>{
     const totalSeries = r.exercises.reduce((a,e)=>a + (+e.defaultSeries || 0), 0);
+    const workoutMeta = getRoutineWorkoutMeta(r);
+    const accent = getThemeAccent();
+    const accentSoft = rgbaFromHex(accent, 0.16);
+    const accentBorder = rgbaFromHex(accent, 0.30);
+    const accentText = rgbaFromHex(accent, 0.92);
     return `
-      <div class="routine-card" onclick="showPreview('${r.id}')">
-        <div class="r-icon">${r.icon || '🏋️'}</div>
-        <div class="r-name">${escapeHtml(r.name)}</div>
-        <div class="r-meta">${escapeHtml(r.desc || '')}</div>
-        <div class="r-meta" style="margin-top:6px">${r.exercises.length} ejercicios · ${totalSeries} series</div>
+      <div class="routine-card routine-card-compact" onclick="showPreview('${r.id}')">
+        <div class="routine-card-main">
+          <div class="r-name">${escapeHtml(r.name)}</div>
+          <div class="r-badges">
+            <span class="r-badge">${r.exercises.length} ejercicios</span>
+            <span class="r-badge">${totalSeries} series</span>
+            <span class="r-badge muted">${workoutMeta.approxMinutes} min</span>
+          </div>
+        </div>
+        <div class="r-footer r-footer-inline">
+          <div class="r-last">Última vez: ${formatWorkoutDateLabel(workoutMeta.lastDate)}</div>
+          <button class="r-start-btn" style="background:${accentSoft}; border-color:${accentBorder}; color:${accentText};" onclick="event.stopPropagation(); startWorkout('${r.id}')">Empezar</button>
+        </div>
       </div>
     `;
   }).join('');
@@ -11445,30 +11514,46 @@ function showPreview(id){
   const r = state.routines.find(x=>x.id===id);
   if(!r) return;
 
-  const total = r.exercises.reduce((a,e)=>a + (+e.defaultSeries || 0), 0);
+  const workoutMeta = getRoutineWorkoutMeta(r);
+  const accent = getThemeAccent();
+  const accentSoft = rgbaFromHex(accent, 0.16);
+  const accentBorder = rgbaFromHex(accent, 0.30);
+  const accentGlow = rgbaFromHex(accent, 0.22);
   document.getElementById('phase-grid').style.display='none';
   document.getElementById('phase-preview').style.display='block';
   document.getElementById('phase-active').style.display='none';
 
+  const previewExercises = r.exercises.map(ex => `<span class="preview-ex-pill">${escapeHtml(ex.name)}</span>`).join('');
   document.getElementById('previewContent').innerHTML = `
-    <div class="preview-header">
-      <div style="font-size:38px;margin-bottom:8px">${r.icon||'🏋️'}</div>
-      <div class="preview-title">${escapeHtml(r.name)}</div>
-      <div class="preview-desc">${escapeHtml(r.desc||'')}</div>
-      <button class="start-btn" onclick="startWorkout('${r.id}')" style="margin-top:14px">⚡ COMENZAR</button>
-      <div class="preview-stats">
-        <div class="preview-stat"><strong>${r.exercises.length}</strong> ejercicios</div>
-        <div class="preview-stat"><strong>${total}</strong> series totales</div>
+    <div class="preview-shell" style="border-color:${accentBorder}; box-shadow:0 20px 44px rgba(0,0,0,.2), 0 0 0 1px ${rgbaFromHex(accent,0.05)} inset;">
+      <div class="preview-header-pro">
+        <div class="preview-topline">
+          <div class="preview-heading">
+            <div class="preview-kicker" style="color:${accent}; border-color:${accentBorder}; background:${accentSoft};">Rutina</div>
+            <div class="preview-title">${escapeHtml(r.name)}</div>
+            <div class="preview-desc">${escapeHtml(r.desc || 'Abre el resumen, revisa tus datos y empieza cuando quieras.')}</div>
+          </div>
+          <button class="preview-start-btn" style="background:${accentSoft}; border-color:${accentBorder}; color:${accent}; box-shadow:0 12px 28px ${accentGlow};" onclick="startWorkout('${r.id}')">Empezar</button>
+        </div>
+
+        <div class="preview-stats-grid">
+          <div class="preview-stat-card">
+            <div class="preview-stat-value">${formatWorkoutDateLabel(workoutMeta.lastDate)}</div>
+            <div class="preview-stat-label">Última vez</div>
+          </div>
+          <div class="preview-stat-card">
+            <div class="preview-stat-value">${workoutMeta.approxMinutes} min</div>
+            <div class="preview-stat-label">Minutos aproximados</div>
+          </div>
+          <div class="preview-stat-card">
+            <div class="preview-stat-value">${workoutMeta.count}</div>
+            <div class="preview-stat-label">Total entrenos</div>
+          </div>
+        </div>
+
+        <div class="preview-exercise-list">${previewExercises}</div>
       </div>
     </div>
-    ${r.exercises.map(ex=>`
-      <div class="preview-exercise">
-        <div style="flex:1">
-          <div class="prev-ex-name">${escapeHtml(ex.name)}</div>
-          <div class="prev-ex-detail">${ex.defaultSeries} series × ${ex.type==='time' ? formatSeconds(ex.defaultDuration ?? ex.defaultReps ?? 60) : ex.defaultReps + ' reps'}${ex.type==='weight' && ex.defaultWeight ? ' @ '+ex.defaultWeight+' kg' : ''}</div>
-        </div>
-      </div>
-    `).join('')}
   `;
 }
 
