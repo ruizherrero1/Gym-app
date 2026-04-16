@@ -586,6 +586,7 @@
       <button class="finish-btn" onclick="finishWorkout()">✓ ACABAR ENTRENAMIENTO</button>
       <button class="discard-btn" onclick="discardWorkout()">Descartar sesión</button>
     </div>
+    </div>
   </div>
 </div>
 
@@ -11371,7 +11372,9 @@ function startWorkout(id){
     const baseSeries = Array.from({length: ex.defaultSeries}, (_,i) => {
       const lastSeries = last?.series?.[i];
       if(ex.type === 'time'){
-        const baseDuration = +(lastSeries?.duration || lastSeries?.reps || ex.defaultDuration || ex.defaultReps || 60);
+        const configuredDuration = +(ex.defaultDuration || ex.defaultReps || 60);
+        const lastDuration = +(lastSeries?.duration || lastSeries?.reps || 0);
+        const baseDuration = configuredDuration > 0 ? configuredDuration : (lastDuration > 0 ? lastDuration : 60);
         return {
           reps: baseDuration,
           duration: baseDuration,
@@ -11649,7 +11652,9 @@ function addSeries(exId){
   if(!ex) return;
   const last = workoutData[exId].series[workoutData[exId].series.length-1];
   if(ex.type === 'time'){
-    const baseDuration = +(last?.duration || last?.reps || ex.defaultDuration || ex.defaultReps || 60);
+    const configuredDuration = +(ex.defaultDuration || ex.defaultReps || 60);
+    const lastDuration = +(last?.duration || last?.reps || 0);
+    const baseDuration = configuredDuration > 0 ? configuredDuration : (lastDuration > 0 ? lastDuration : 60);
     workoutData[exId].series.push({ reps: baseDuration, duration: baseDuration, remaining: baseDuration, weight: 0, done: false });
   } else {
     workoutData[exId].series.push({
